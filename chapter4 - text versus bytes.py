@@ -11,3 +11,12 @@
 # # b = a.encode("ASCII")
 # # if b == c:
 # #     print("Encoding succesful.")
+
+
+
+d = "cafeη".encode(encoding="utf-8")
+print(d)
+
+print(d[0])
+print(d[:1])
+
