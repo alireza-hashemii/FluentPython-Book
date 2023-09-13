@@ -79,11 +79,46 @@
 # print(first_bingo())
 
 
-def fact(num):
-    return 1 if num < 2 else num * fact(num - 1)
+# def fact(num):
+#     return 1 if num < 2 else num * fact(num - 1)
 
-class A:
-    pass
+# class A:
+#     pass
 
-obj = A()
-print(set(dir(fact))  - set(dir(obj)))
+# obj = A()
+# print(set(dir(fact))  - set(dir(obj)))
+
+# def tag(name, *content, cls=None, **attrs):
+#     if cls is not None:
+#         attrs["class"] = cls
+    
+#     if attrs:
+#         attrs_str = " ".join(' %s="%s"' % (attr,value) for attr,value in sorted(attrs.items()))
+#     else:
+#         attrs_str = ''
+    
+#     if content:
+#         return "".join("<%s %s >%s</%s>" % (name,attrs_str,content[0],name))
+    
+#     else:
+#         return "<%s %s ></%s>" % (name,attrs_str,name)
+    
+# tag1 = tag("p","is that working really?",cls="border-radius",textalign="justify")
+# print(tag1)
+
+
+def how_func_works(* , p = None):
+    print(p)
+
+
+how_func_works(p=4)
+
+
+# generaly we have 5 types of arguments in python
+# 1-keyword argument 2-positional argument 3-arbitrary keyword argument 
+# 4- arbitrary positional argument 5- default argument 
+
+#! Note that some resources have considered option 3 and 4 as a single option
+
+# we make positional-only args with / sign.moreover keyword-only
+# args can be declared by the usage of * (asterisk sign)
