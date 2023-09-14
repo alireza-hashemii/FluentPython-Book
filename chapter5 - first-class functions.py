@@ -107,11 +107,11 @@
 # print(tag1)
 
 
-def how_func_works(* , p = None):
-    print(p)
+# def how_func_works(* , p = None):
+#     print(p)
 
 
-how_func_works(p=4)
+# how_func_works(p=4)
 
 
 # generaly we have 5 types of arguments in python
@@ -120,5 +120,24 @@ how_func_works(p=4)
 
 #! Note that some resources have considered option 3 and 4 as a single option
 
-# we make positional-only args with / sign.moreover keyword-only
+# We make positional-only args with / sign.moreover keyword-only
 # args can be declared by the usage of * (asterisk sign)
+
+
+def clip(text:str , max_len=80):
+    end = None
+    if len(text) > max_len:
+        space_before = text.rfind(' ', 0, max_len)
+        if space_before >= 0:
+            end = space_before
+        else:
+            space_after = text.rfind(' ',max_len)
+            if space_before >= 0:
+                end = space_after
+    if end is None:
+        end = len(text)
+    
+    return text[:end].rstrip()
+
+clip_func = clip("alireza hashemi hastam ashegh bazi babache ha",max_len=20)
+print(clip_func)
