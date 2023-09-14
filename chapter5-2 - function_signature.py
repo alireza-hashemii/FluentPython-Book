@@ -27,10 +27,10 @@ sig = signature(addition)
 # print(sig.parameters["a"])
 
 # bind
-my_kw = {
-    "name":"saeid",
+# my_kw = {
+#     "name":"saeid",
     
-    "addr": "Not far"
-}
+#     "addr": "Not far"
+# }
 
-print(sig.bind(**my_kw))
+# print(sig.bind(**my_kw))

@@ -148,5 +148,21 @@
 
 # introspection(4,7,5,v=5,b=7)
 
+# from functools import reduce
+# from operator import mul
 
-import tkinter
+# def fact_lambda(n):
+#     return reduce(mul,range(1,n+1))
+
+# print(fact_lambda(5))
+
+# from operator import itemgetter, attrgetter
+# vecinity_data = [
+#     ("Japan","Jp",34000000,(43563,-7613834)),
+#     ("The Us","Us",32643346,(353,4151834)),
+#     ("Australia","Aus",5476934,(453,-9762434)),
+#     ("England","Eng",4364242222,(4533,1764834)),
+# ]
+
+# for city in sorted(vecinity_data, key=itemgetter(1)):
+#     print(city)
