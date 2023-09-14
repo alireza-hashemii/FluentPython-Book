@@ -1,3 +1,6 @@
+from inspect import signature
+
+
 def clip(text:str  , /, max_len=80,*args):
     end = None
     if len(text) > max_len:
@@ -12,3 +15,22 @@ def clip(text:str  , /, max_len=80,*args):
         end = len(text)
     
     return text[:end].rstrip()
+
+
+
+def addition(**kwargs):
+    return kwargs
+
+
+sig = signature(addition)
+# ordered mapping which maps parametrs names to corresponding aramter object
+# print(sig.parameters["a"])
+
+# bind
+my_kw = {
+    "name":"saeid",
+    
+    "addr": "Not far"
+}
+
+print(sig.bind(**my_kw))

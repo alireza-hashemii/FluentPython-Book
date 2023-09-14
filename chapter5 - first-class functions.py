@@ -124,20 +124,29 @@
 # args can be declared by the usage of * (asterisk sign)
 
 
-def clip(text:str , max_len=80):
-    end = None
-    if len(text) > max_len:
-        space_before = text.rfind(' ', 0, max_len)
-        if space_before >= 0:
-            end = space_before
-        else:
-            space_after = text.rfind(' ',max_len)
-            if space_before >= 0:
-                end = space_after
-    if end is None:
-        end = len(text)
+# def clip(text:str , max_len=80):
+#     end = None
+#     if len(text) > max_len:
+#         space_before = text.rfind(' ', 0, max_len)
+#         if space_before >= 0:
+#             end = space_before
+#         else:
+#             space_after = text.rfind(' ',max_len)
+#             if space_before >= 0:
+#                 end = space_after
+#     if end is None:
+#         end = len(text)
     
-    return text[:end].rstrip()
+#     return text[:end].rstrip()
 
-clip_func = clip("alireza hashemi hastam ashegh bazi babache ha",max_len=20)
-print(clip_func)
+# clip_func = clip("alireza hashemi hastam ashegh bazi babache ha",max_len=20)
+# print(clip_func)
+# from inspect import signature
+# def introspection(*args, **kwargs):
+#     sign = signature(introspection)
+#     print(sign.bind(4,6))
+
+# introspection(4,7,5,v=5,b=7)
+
+
+import tkinter
