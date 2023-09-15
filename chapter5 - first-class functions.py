@@ -166,3 +166,10 @@
 
 # for city in sorted(vecinity_data, key=itemgetter(1)):
 #     print(city)
+
+from operator import mul
+from functools import partial
+
+triple = partial(mul,2)
+
+print(triple(4))
