@@ -1,5 +1,5 @@
 """
-A simple class to learn more deeply 
+A simple class to learn deeply 
 the concept of special methods
 in Python - taken from the first
 chapter of the fluent python book 
