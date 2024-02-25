@@ -146,22 +146,22 @@
 
 
 
-def country_tel(tel):
-    if isinstance(tel , str):
-        sub = [f"+{tel[0]}", tel[1:]]
-    else:
-        tel_to_str = str(tel)
-        sub = [f"+{tel_to_str[0]}", tel_to_str[1:]]
+# def country_tel(tel):
+#     if isinstance(tel , str):
+#         sub = [f"+{tel[0]}", tel[1:]]
+#     else:
+#         tel_to_str = str(tel)
+#         sub = [f"+{tel_to_str[0]}", tel_to_str[1:]]
     
-    match sub:
-        case ['+1', number]:
-            print("calling from the US")
-        case ['+5', number]:
-            return "calling from Africa"
-        case ['+3' | "+4", number]:
-            return "calling from Europe" 
-        case _:
-            return "calling from the unknown continent"
+#     match sub:
+#         case ['+1', number]:
+#             print("calling from the US")
+#         case ['+5', number]:
+#             return "calling from Africa"
+#         case ['+3' | "+4", number]:
+#             return "calling from Europe" 
+#         case _:
+#             return "calling from the unknown continent"
         
 
 
@@ -213,6 +213,19 @@ def country_tel(tel):
 #             break
         
 
-a = "ali"
-a += "m"
-print()
+# a = "ali"
+# a += "m"
+# print()
+        
+# from collections import deque
+
+# deck = deque(range(1,11), maxlen=10)
+# # print(deck)
+# # deck.append(4)
+# # print(deck)
+# # deck.appendleft(4)
+# # print(deck)
+# deck.rotate(-1)
+# print(4 in deck)
+# print(deck)
+
