@@ -229,3 +229,5 @@
 # print(4 in deck)
 # print(deck)
 
+t = (2, 5, "t" ,[])
+print(hash(t))
