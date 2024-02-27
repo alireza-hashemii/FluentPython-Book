@@ -227,10 +227,10 @@
 # print(returned)
 
 
-d1 = {"a":1, "b":2}
-d2 = {"a":3, "b":5 , "c":4}
+# d1 = {"a":1, "b":2}
+# d2 = {"a":3, "b":5 , "c":4}
 
-print(d1 | d2)
+# print(d1 | d2)
 
-d1 |= d2
-print(d1)
+# d1 |= d2
+# print(d1)
