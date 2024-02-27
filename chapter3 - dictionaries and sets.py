@@ -220,8 +220,17 @@
 # print(newversion_dcomp)
 
 
-def key(**kwargs):
-    return kwargs
+# def key(**kwargs):
+#     return kwargs
 
-returned = key(**{"a":4,"b":5},**{"aa":9,"p":0})
-print(returned)
+# returned = key(**{"a":4,"b":5},**{"aa":9,"p":0})
+# print(returned)
+
+
+d1 = {"a":1, "b":2}
+d2 = {"a":3, "b":5 , "c":4}
+
+print(d1 | d2)
+
+d1 |= d2
+print(d1)
