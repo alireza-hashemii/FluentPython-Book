@@ -201,20 +201,27 @@
 
 
 
-dial_codes = [ 
-    (880, 'Bangladesh'),
-    (55, 'Brazil'),
-    (86, 'China'),
-    (91, 'India'),
-    (62, 'Indonesia'),
-    (81, 'Japan'),
-    (234, 'Nigeria'),
-    (92, 'Pakistan'),
-    (7, 'Russia'),
-    (1, 'United States'),
-]
-dict_comp = {country:code for code,country in dial_codes}
-print(dict_comp)
+# dial_codes = [ 
+#     (880, 'Bangladesh'),
+#     (55, 'Brazil'),
+#     (86, 'China'),
+#     (91, 'India'),
+#     (62, 'Indonesia'),
+#     (81, 'Japan'),
+#     (234, 'Nigeria'),
+#     (92, 'Pakistan'),
+#     (7, 'Russia'),
+#     (1, 'United States'),
+# ]
+# dict_comp = {country:code for code,country in dial_codes}
+# print(dict_comp)
 
-newversion_dcomp = {country:code for code,country in dial_codes if code < 70}
-print(newversion_dcomp)
+# newversion_dcomp = {country:code for code,country in dial_codes if code < 70}
+# print(newversion_dcomp)
+
+
+def key(**kwargs):
+    return kwargs
+
+returned = key(**{"a":4,"b":5},**{"aa":9,"p":0})
+print(returned)
