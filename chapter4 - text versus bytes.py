@@ -29,4 +29,4 @@
 
 
 # different ways of instanciating binary types
-f = bytes("hello", encoding="utf_8")
+# f = bytes("hello", encoding="utf_8")
