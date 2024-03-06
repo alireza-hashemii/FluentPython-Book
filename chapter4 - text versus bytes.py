@@ -34,3 +34,10 @@
 # s1 = 'café'
 # s2 = 'cafe\N{COMBINING ACUTE ACCENT}'
 # print(s2)
+
+
+# from unicodedata import normalize, name
+# ohm = '\u2126'
+# ohm_c = normalize('NFC', ohm)
+# print(ohm == ohm_c)
+# print(normalize("NFC", ohm) == ohm_c)
