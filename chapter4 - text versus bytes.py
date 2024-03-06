@@ -30,3 +30,7 @@
 
 # different ways of instanciating binary types
 # f = bytes("hello", encoding="utf_8")
+
+# s1 = 'café'
+# s2 = 'cafe\N{COMBINING ACUTE ACCENT}'
+# print(s2)
