@@ -167,9 +167,39 @@
 # for city in sorted(vecinity_data, key=itemgetter(1)):
 #     print(city)
 
-from operator import mul
-from functools import partial
+# from operator import mul
+# from functools import partial
 
-triple = partial(mul,2)
+# triple = partial(mul,2)
 
-print(triple(4))
+# print(triple(4))
+
+
+# Edition 2
+# from coordinates import Coordinate
+
+# beijing = Coordinate(35.45,58.34, order=["lan","lon"])
+
+# shanghai = Coordinate(35.45,58.34, order=["lan","lon"])
+
+# print(beijing == shanghai)
+
+from typing import NamedTuple
+class Coordinate(NamedTuple):
+    lat: float
+    lon: float
+
+    def __str__(self):
+        ns = 'N' if self.lat >= 0 else 'S'
+        we = 'E' if self.lon >= 0 else 'W'
+        return f'{abs(self.lat):.1f}°{ns}, {abs(self.lon):.1f}°{we}'
+
+
+tehran = Coordinate(**{"lat":45, "lon":23})
+print(tehran)
+
+
+
+
+
+
