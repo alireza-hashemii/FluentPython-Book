@@ -218,3 +218,12 @@ from dataclasses import dataclass
 
 # rome = Coordinate(23,53)
 # print(rome.__match_args__)
+
+import typing
+class Coordinate(typing.NamedTuple):
+    a: int
+    b: float = 1.1
+    c = "salam"
+ 
+baa = Coordinate(3)
+baa.v = 4
