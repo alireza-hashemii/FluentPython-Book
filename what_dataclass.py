@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 from collections import namedtuple
-from typing import NamedTuple
-from dataclasses import field
+from typing import NamedTuple ,Optional
+from dataclasses import field , fields
 from typing import ClassVar
+from enum import Enum, auto
+import datetime
 # we have 3 primary ways to create dataclasses. First 2 of them
 # are collections.namedtuple and typing.NamedTuple. Tiny differences 
 # could be spot between them. In addition, the last one is dataclass  
@@ -29,7 +31,6 @@ class ClubMember:
     # Note: don't pust mutuable types as parameters default value under any circumstance
     guests: list = field(default_factory=list)
 
-
 # if you put type hint for a class field(variable) it will be 
 # automatically converted into an instance field. so currently the best 
 # way is to use ClassVar from typing module. Note that this just happens
@@ -51,3 +52,34 @@ class HackerClubMemeber(ClubMember):
 
 ins = HackerClubMemeber("John Doe")
 instance = HackerClubMemeber("John Surgey", handle="Johny")
+
+
+
+
+
+class ResourceType(Enum): 
+    BOOK = auto()
+    EBOOK = auto()
+    VIDEO = auto()
+
+class Resource:
+    """Media resource description."""
+    identifier: str 
+    title: str = '<untitled>' 
+    creators: list[str] = field(default_factory=list)
+    date: Optional[datetime.date] = None 
+    type: ResourceType = ResourceType.BOOK 
+    description: str = ''
+    language: str = ''
+    subjects: list[str] = field(default_factory=list)
+
+    def __repr__(self) -> str:
+        indent = " " * 4
+        cls = self.__class__
+        res = [f'{cls.__name__} (']
+        for f in fields(cls):
+            value = getattr(self, f.name)
+            res.append(f'{indent}{f.name} = {value!r},') 
+        
+        res.append(')')
+        return '\n'.join(res)
