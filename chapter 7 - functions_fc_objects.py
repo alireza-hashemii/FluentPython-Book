@@ -15,4 +15,7 @@ second_way = sum(range(100))
 
 
 #other reducing functions
-any()
+# weird behaviour!!
+dummy_conatainer = [False, 7]
+print(any(dummy_conatainer)) # returns true if at least 1 element is truthy
+print(all(dummy_conatainer)) # returns true if all the elements are truthy
