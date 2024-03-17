@@ -19,3 +19,8 @@ using_concomps =  [factorial(n) for n in range(6) if n % 2]
 # dummy_conatainer = [False, 7]
 # print(any(dummy_conatainer)) # returns true if at least 1 element is truthy
 # print(all(dummy_conatainer)) # returns true if all the elements are truthy
+
+
+
+
+
