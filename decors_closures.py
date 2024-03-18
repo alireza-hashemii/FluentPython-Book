@@ -77,15 +77,29 @@
 # print(d.__code__.co_freevars)
 # print(d.__closure__[0].cell_contents)
 
-def make_averager():
-    total = 0
-    count = 0
-    def averager(__new_value):
-        nonlocal count, total
-        count += 1
-        total += __new_value
-        return total / count
-    return averager
+# def make_averager():
+#     total = 0
+#     count = 0
+#     def averager(__new_value):
+#         nonlocal count, total
+#         count += 1
+#         total += __new_value
+#         return total / count
+#     return averager
 
-d = make_averager()
-print(d(34))
+# d = make_averager()
+# print(d(34))
+
+
+import time
+
+def clock(func):
+    def clocked(*args):
+        start = time.perf_counter()
+        result = func(*args)
+        elapsed = time.perf_counter() - start
+        name = func.__name__
+        arg_str = " ".join(str(arg) for arg in args)
+        print(f"[Elapsed Time: {elapsed:0.8f}s] {name}({arg_str} -> {result!r})")
+        return result
+    return clocked
