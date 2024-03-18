@@ -76,3 +76,16 @@
 # print(d.__code__.co_varnames)
 # print(d.__code__.co_freevars)
 # print(d.__closure__[0].cell_contents)
+
+def make_averager():
+    total = 0
+    count = 0
+    def averager(__new_value):
+        nonlocal count, total
+        count += 1
+        total += __new_value
+        return total / count
+    return averager
+
+d = make_averager()
+print(d(34))
