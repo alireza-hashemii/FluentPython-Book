@@ -91,15 +91,54 @@
 # print(d(34))
 
 
-import time
+# import time
 
-def clock(func):
-    def clocked(*args):
-        start = time.perf_counter()
-        result = func(*args)
-        elapsed = time.perf_counter() - start
-        name = func.__name__
-        arg_str = " ".join(str(arg) for arg in args)
-        print(f"[Elapsed Time: {elapsed:0.8f}s] {name}({arg_str} -> {result!r})")
-        return result
-    return clocked
+# def clock(func):
+#     def clocked(*args):
+#         start = time.perf_counter()
+#         result = func(*args)
+#         elapsed = time.perf_counter() - start
+#         name = func.__name__
+#         arg_str = " ".join(str(arg) for arg in args)
+#         print(f"[Elapsed Time: {elapsed:0.8f}s] {name}({arg_str} -> {result!r})")
+#         return result
+#     return clocked
+
+
+
+# @clock
+# def fibonacci(n):
+#     if n < 2:
+#         return n
+#     return fibonacci(n - 2) + fibonacci(n - 1)
+
+# print(fibonacci([6]))
+
+# import time
+# def track(func):
+#     items = {
+#         "Models": ['F8', 'I20', "S12"],
+#         "Quantity": [34,30,32],
+#         "Last_sold": [None, None, None]
+#     }
+
+#     def change_warehousee(*args):
+#         nonlocal items
+#         particular_object = int(items["Models"].index(args[0]))
+#         items["Quantity"][particular_object] += 1
+
+    
+#         item_chosen = items.get(args[0])
+#         function = func(item_chosen)
+#         print(items)
+#         return function
+        
+#     return change_warehousee
+
+# @track
+# def shop(item: any):
+#     return "It is added to the cart"
+
+
+
+# print(shop("I20"))
