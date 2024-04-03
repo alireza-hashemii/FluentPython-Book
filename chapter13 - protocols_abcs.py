@@ -35,3 +35,5 @@ BasketballTeam.__getitem__ = subscriptable
 t = BasketballTeam()
 t[0]
 
+
+# here is what fast-fail philosophy means and whent it'd be better to be used.
