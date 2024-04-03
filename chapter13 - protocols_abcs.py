@@ -14,3 +14,24 @@ vowels[2]
 # by interpreter itself. you can implement just part of them and your program still works 
 # well , but in dynamic protocols you must implement all the required and decleared
 # methods to be able to use dynamic typing.
+
+# The Sequence abc is a formalized interface for sequences in python and it's implicitly 
+# known to interpreter. you don't need to implement all it's methods to have a seq type.
+
+
+# Here is an example of monkey patching - it is mainly about changing the 
+# behaviour of a class at runtime without changing it's source code.
+class BasketballTeam:
+    def __init__(self) -> None:
+        self.team = "John Andrew Zack Conor"
+
+
+def subscriptable(self, position):
+    team = self.team.split(" ")
+    return team[position]
+
+BasketballTeam.__getitem__ = subscriptable
+
+t = BasketballTeam()
+t[0]
+
