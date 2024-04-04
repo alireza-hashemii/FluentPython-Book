@@ -48,3 +48,16 @@ class FailFast:
 failfast = FailFast(3) # wrong - except block gets run
 
 # The whole fail fast philosophy is about catching errors as soon as possible at runtime.
+
+
+# Duck typing to handle a string or iterable of strings. 
+def identifiers(field_names: str | list[str]):
+    try:
+        field_names = field_names.replace(",", " ").split()
+    except AttributeError:
+        pass
+    field_names = tuple(field_names)
+    if not all(s.isidentifier() for s in field_names):
+        raise ValueError("field_names must all be valid identifiers")
+
+identifiers(["first_name", "second_name"]) # works well
