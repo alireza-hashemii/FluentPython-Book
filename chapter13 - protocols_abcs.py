@@ -36,4 +36,15 @@ t = BasketballTeam()
 t[0]
 
 
-# here is what fast-fail philosophy means and whent it'd be better to be used.
+# here is what fast-fail philosophy means and when it'd be better to be used.
+class FailFast:
+    def __init__(self, iterable) -> None:
+        try:
+            self._ball = list(iterable)
+
+        except TypeError:
+            print(f"type {(iterable.__class__.__name__)} is not considered to be iterable.")
+
+failfast = FailFast(3) # wrong - except block gets run
+
+# The whole fail fast philosophy is about catching errors as soon as possible at runtime.
