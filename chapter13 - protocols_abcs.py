@@ -61,3 +61,6 @@ def identifiers(field_names: str | list[str]):
         raise ValueError("field_names must all be valid identifiers")
 
 identifiers(["first_name", "second_name"]) # works well
+
+
+# all about goose typing
