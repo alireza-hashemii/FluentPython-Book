@@ -55,3 +55,12 @@ class Leaf(A,B):
 leaf1 = Leaf()
 # leaf1.ping()
 # leaf1.pong()
+
+print(Leaf.mro()) # [<class '__main__.Leaf'>, <class '__main__.A'>, <class '__main__.B'>, <class '__main__.Root'>, <class 'object'>]
+
+
+
+
+
+import tkinter
+
