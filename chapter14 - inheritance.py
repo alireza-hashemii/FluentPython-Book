@@ -59,8 +59,11 @@ leaf1 = Leaf()
 print(Leaf.mro()) # [<class '__main__.Leaf'>, <class '__main__.A'>, <class '__main__.B'>, <class '__main__.Root'>, <class 'object'>]
 
 
-
-
-
+# tkinter multiple inheritance hierarchy
 import tkinter
+def show_mro(cls):
+    mros = [cls.__name__ for cls in cls.mro()]
+    rp_mro = " ".join(mros)
+    print(rp_mro)
 
+show_mro(tkinter.Text)
