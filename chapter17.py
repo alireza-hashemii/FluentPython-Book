@@ -66,3 +66,9 @@
 # print("----")
 # for i in s:
 #     print(i)
+
+# r = (x for x in range(100) if x % 2 ==0)
+# print(r)
+# print(next(r))
+
+r = ('Ok', "Two")(1)
