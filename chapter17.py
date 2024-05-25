@@ -71,4 +71,15 @@
 # print(r)
 # print(next(r))
 
-r = ('Ok', "Two")(1)
+from itertools import compress, dropwhile, cycle
+
+gen_obj = compress([3,6,9,0], [1,1,1,1])
+for result in gen_obj:
+    # print(result)
+    pass
+
+
+
+generator = dropwhile(str, ["Ali", "Mohammad", "Hasan"])
+for selected_name in generator:
+    print(selected_name)
